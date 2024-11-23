@@ -6,13 +6,13 @@ include("koneksi.php");
 $id = $_GET['xyz'];
 
 #3. menulis query
-$hapus = "DELETE FROM buku WHERE id='$id'";
+$hapus = "DELETE FROM buku WHERE id_buku='$id'";
 
 #4. jalankan query
 $proses = mysqli_query($koneksi, $hapus);
 
-#5. mengalihkan halaman
-header("location:index.php");
+// #5. mengalihkan halaman
+// header("location:index.php");
 ?>
 <script>
     document.location="index.php";

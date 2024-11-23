@@ -5,11 +5,11 @@ include("koneksi.php");
 #2. mengambil value dari form
 $jb = $_POST['judul_buku'];
 $pgr = $_POST['pengarang'];
-$thn = $_POST['tahun_terbit'];
 $ktr = $_POST['kategori'];
+$thn = $_POST['tahun_terbit'];
 
 #3. menulis query
-$simpan = "INSERT INTO buku (judul_buku,pengarang,tahun_terbit,kategori) VALUES ('$jb','$pgr','$thn','$ktr')";
+$simpan = "INSERT INTO buku (judul_buku,pengarang,kategori,tahun_terbit) VALUES ('$jb','$pgr','$ktr','$thn')";
 
 #4. jalankan query
 $proses = mysqli_query($koneksi, $simpan);

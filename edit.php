@@ -3,10 +3,10 @@
 include("koneksi.php");
 
 #2. ambil id yang akan disunting
-$id = $_GET['id'];
+$id = $_GET['id_buku'];
 
 #3. mengambil semua record data berdasarkan id yang dipilih
-$ambil = "SELECT * FROM buku WHERE id='$id'";
+$ambil = "SELECT * FROM buku WHERE id_buku='$id'";
 
 #4. menjalankan query
 $edit = mysqli_query($koneksi,$ambil);
@@ -36,7 +36,7 @@ $data = mysqli_fetch_array($edit)
             </div>
             <div class="card-body">
             <form action="update.php" method="post">
-                <input type="hidden" name="id" value="<?=$data['id']?>">
+                <input type="hidden" name="id" value="<?=$data['id_buku']?>">
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Judul Buku</label>
                     <input type="text" readonly value="<?=$data['judul_buku']?>" name="judul" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
