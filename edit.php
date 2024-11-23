@@ -3,10 +3,10 @@
 include("koneksi.php");
 
 #2. ambil id yang akan disunting
-$id = $_GET['id_buku'];
+$id = $_GET['id'];
 
 #3. mengambil semua record data berdasarkan id yang dipilih
-$ambil = "SELECT * FROM buku WHERE id_buku='$id'";
+$ambil = "SELECT * FROM buku WHERE id='$id'";
 
 #4. menjalankan query
 $edit = mysqli_query($koneksi,$ambil);
@@ -36,7 +36,7 @@ $data = mysqli_fetch_array($edit)
             </div>
             <div class="card-body">
             <form action="update.php" method="post">
-                <input type="hidden" name="id" value="<?=$data['id_buku']?>">
+                <input type="hidden" name="id" value="<?=$data['id']?>">
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Judul Buku</label>
                     <input type="text" readonly value="<?=$data['judul_buku']?>" name="judul" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -44,6 +44,14 @@ $data = mysqli_fetch_array($edit)
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Pengarang</label>
                     <input type="text" value="<?=$data['pengarang']?>" name="pengarang" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Kategori</label>
+                    <input type="text" value="<?=$data['kategori']?>" name="pengarang" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Pengarang</label>
+                    <input type="text" value="<?=$data['tahun']?>" name="tahun_terbit" class="form-control" id="exampleInputPassword1">
                 </div>
                 
                 <button type="submit" class="btn btn-primary">Update</button>
