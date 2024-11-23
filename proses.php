@@ -9,7 +9,7 @@ $thn = $_POST['tahun_terbit'];
 $ktr = $_POST['kategori'];
 
 #3. menulis query
-$simpan = "INSERT INTO jurusan (kode,jurusan) VALUES ('$jb','$pgr','$thn','$ktr')";
+$simpan = "INSERT INTO buku (judul_buku,pengarang,tahun_terbit,kategori) VALUES ('$jb','$pgr','$thn','$ktr')";
 
 #4. jalankan query
 $proses = mysqli_query($koneksi, $simpan);

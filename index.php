@@ -24,6 +24,8 @@
                         <th scope="col">Pengarang</th>
                         <th scope="col">Kategori</th>
                         <th scope="col">Tahun Terbit</th>
+                        <th scope="col">Action</th>
+
                     </tr>
                 </thead>
                 <tbody>
@@ -43,10 +45,13 @@
                     ?>
                     <tr>
                         <th scope="row"><?=$nomor++?></th>
-                        <td><?=$data['kode']?></td>
-                        <td><?=$data['jurusan']?></td>
+                        <td><?=$data['judul_buku']?></td>
+                        <td><?=$data['pengarang']?></td>
+                        <td><?=$data['tahun_terbit']?></td>
+                        <td><?=$data['kategori']?></td>
+
                         <td>
-                            <a class="btn btn-info btn-sm" href="edit.php?id=<?=$data['id']?>"><i class="fa fa-pen-to-square"></i></a>
+                            <a class="btn btn-info btn-sm" href="edit.php"><i class="fa fa-pen-to-square"></i></a>
                             
                             <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#hapus<?=$data['id']?>">
                             <i class="fa-solid fa-trash"></i>
@@ -61,11 +66,11 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    Yakin data <b><?=$data['jurusan']?></b> ingin dihapus?
+                                    Yakin data <b><?=$data['buku']?></b> ingin dihapus?
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                                    <a href="hapus.php?xyz=<?=$data['id']?>" class="btn btn-danger">Hapus</a>
+                                    <a href="hapus.php" class="btn btn-danger">Hapus</a>
                                 </div>
                                 </div>
                             </div>
