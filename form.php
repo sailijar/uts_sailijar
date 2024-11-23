@@ -27,9 +27,13 @@
                     <input type="text" name="pengarang" class="form-control" id="exampleInputPassword1">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Kategori</label>
-                    <input type="text" name="kategori" class="form-control" id="exampleInputPassword1">
-                </div>
+    <label for="exampleInputPassword1" class="form-label">kategori</label>
+        <select name="kategori" id="" class="form-control">
+            <option value="">-pilih kategori-</option>
+            <option value="komputer">bekas</option>
+            <option value="akuntansi">baru</option>
+            </select>
+  </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Tahun Terbit</label>
                     <input type="date" name="tahun" class="form-control" id="exampleInputPassword1">
