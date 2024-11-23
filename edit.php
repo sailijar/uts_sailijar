@@ -45,15 +45,6 @@ $data = mysqli_fetch_array($edit)
                     <label for="exampleInputPassword1" class="form-label">Pengarang</label>
                     <input type="text" value="<?=$data['pengarang']?>" name="pengarang" class="form-control" id="exampleInputPassword1">
                 </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Kategori</label>
-                    <input type="text" value="<?=$data['kategori']?>" name="pengarang" class="form-control" id="exampleInputPassword1">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Pengarang</label>
-                    <input type="text" value="<?=$data['tahun']?>" name="tahun_terbit" class="form-control" id="exampleInputPassword1">
-                </div>
-                
                 <button type="submit" class="btn btn-primary">Update</button>
             </form>
             </div>
@@ -62,8 +53,8 @@ $data = mysqli_fetch_array($edit)
     </div>
 </div>
 
-    <script src="../js/bootstrap.js"></script>
-    <script src="../js/bootstrap.bundle.js"></script>
-    <script src="../js/all.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/all.js"></script>
 </body>
 </html>
