@@ -47,18 +47,19 @@
                         <th scope="row"><?=$nomor++?></th>
                         <td><?=$data['judul_buku']?></td>
                         <td><?=$data['pengarang']?></td>
-                        <td><?=$data['tahun_terbit']?></td>
                         <td><?=$data['kategori']?></td>
+                        <td><?=$data['tahun_terbit']?></td>
+                        
 
                         <td>
                             <a class="btn btn-info btn-sm" href="edit.php"><i class="fa fa-pen-to-square"></i></a>
                             
-                            <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#hapus<?=$data['id']?>">
+                            <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#hapus<?=$data['id_buku']?>">
                             <i class="fa-solid fa-trash"></i>
                             </button>
 
                             <!-- Modal -->
-                            <div class="modal fade" id="hapus<?=$data['id']?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="hapus<?=$data['id_buku']?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                 <div class="modal-header">
@@ -66,7 +67,7 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    Yakin data <b><?=$data['buku']?></b> ingin dihapus?
+                                    Yakin data <b><?=$data['id_buku']?></b> ingin dihapus?
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
