@@ -20,19 +20,19 @@
             <form action="proses.php" method="post">
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Judul Buku</label>
-                    <input type="text" name="kode" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="text" name="judul" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Pengarang</label>
-                    <input type="text" name="jurusan" class="form-control" id="exampleInputPassword1">
+                    <input type="text" name="pengarang" class="form-control" id="exampleInputPassword1">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Kategori</label>
-                    <input type="text" name="jurusan" class="form-control" id="exampleInputPassword1">
+                    <input type="text" name="kategori" class="form-control" id="exampleInputPassword1">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Tahun Terbit</label>
-                    <input type="text" name="jurusan" class="form-control" id="exampleInputPassword1">
+                    <input type="date" name="tahun" class="form-control" id="exampleInputPassword1">
                 </div>
                 
                 <button type="submit" class="btn btn-primary">Submit</button>
